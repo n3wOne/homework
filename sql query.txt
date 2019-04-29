@@ -1,0 +1,4 @@
+1.1) SELECT * FROM `emploee` WHERE city LIKE ("À%") ORDER BY name ASC
+1.2) SELECT * FROM `emploee` WHERE DAYOFMONTH(birthday) = DAYOFMONTH(CURRENT_DATE()) AND MONTH(birthday)= MONTH(CURRENT_DATE())
+1.3) SELECT name, salary FROM emploee WHERE salary = (SELECT MAX(salary) FROM emploee) OR salary= (SELECT MIN(salary) FROM emploee) ORDER BY name
+1.4) SELECT department_id, MAX(salary) FROM emploee GROUP BY department_id ORDER BY department_id
